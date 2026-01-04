@@ -80,7 +80,7 @@ def news_pipeline():
         while retries < max_retries:
             query = get_random_query()
             print(f"Search Query: {query}")
-            articles_ingested = ingest_news(search_query=query, num_articles=1)
+            articles_ingested = ingest_news(search_query=query, num_articles=5)
             if articles_ingested:
                 print("Scoring News...")
                 analyze_news()
