@@ -40,6 +40,14 @@ def get_unscored_news(db_directory):
         return result
 
 
+def get_all_news(db_directory):
+    with sql.connect(db_directory) as con:
+        cur = con.cursor()
+        cur.execute("SELECT * FROM news")
+        result = cur.fetchall()
+        return result
+
+
 def score_news(news_title: str, news_content: str, model: str, system_message: str):
     try:
         response = client.chat.completions.create(

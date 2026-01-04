@@ -14,7 +14,9 @@ dependencies = [
     "feedparser",
     "trafilatura",
     "requests",
-    "python-dotenv"
+    "python-dotenv",
+    "streamlit",
+    "pydantic",
 ]
 
 [tool.setuptools.packages.find]
